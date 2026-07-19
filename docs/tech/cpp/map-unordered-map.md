@@ -412,4 +412,4 @@ Handle / 整数索引
 8. `unordered_map` 不一定总比 `map` 或排序 `vector` 快。
 9. 引擎热路径通常将字符串键转换为 Asset ID 或 Handle。
 
-[← 上一章：vector、list 与迭代器失效](./containers-vector-list.md) · [返回学习地图](../cpp-engine-foundations.md)
+[← 上一章：vector、list 与迭代器失效](./containers-vector-list.md) · [下一章：栈、堆与虚拟内存 →](./memory-stack-heap-virtual.md)

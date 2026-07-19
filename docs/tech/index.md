@@ -15,3 +15,5 @@
 3. [对象模型、虚函数与多态](./cpp/object-model-polymorphism.md)
 4. [`vector`、`list` 与迭代器失效](./cpp/containers-vector-list.md)
 5. [`map`、`unordered_map` 与 rehash](./cpp/map-unordered-map.md)
+6. [栈、堆、虚拟内存与 Page Fault](./cpp/memory-stack-heap-virtual.md)
+7. [内存安全、OOM 与诊断方法](./cpp/memory-safety-debugging.md)

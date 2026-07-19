@@ -37,6 +37,16 @@
    - Load Factor、rehash 和迭代器失效
    - 查询与插入接口的隐藏行为
    - Flat Hash Map、字符串键与引擎选择
+6. [栈、堆、虚拟内存与 Page Fault](./cpp/memory-stack-heap-virtual.md)
+   - 线程栈、动态分配与堆分配器
+   - 虚拟地址、Page、页表与 TLB
+   - Demand Paging、Copy-on-Write 与 Page Fault
+   - 内外碎片、专用分配器和移动端约束
+7. [内存安全、OOM 与诊断方法](./cpp/memory-safety-debugging.md)
+   - 泄漏、越界、Use After Free 与 Double Free
+   - OOM、峰值内存和延迟崩溃
+   - 异步生命周期与并发内存破坏
+   - Sanitizer、Guard Page 与系统化排查
 
 本页保留为知识总览。专题篇章按学习顺序展开，并记录讨论中补充的细节。
 

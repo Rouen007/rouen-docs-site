@@ -49,7 +49,9 @@ export default defineConfig({
             { text: '2. 复制、移动与 noexcept', link: '/tech/cpp/copy-move-noexcept' },
             { text: '3. 对象模型与多态', link: '/tech/cpp/object-model-polymorphism' },
             { text: '4. vector、list 与迭代器', link: '/tech/cpp/containers-vector-list' },
-            { text: '5. map 与 unordered_map', link: '/tech/cpp/map-unordered-map' }
+            { text: '5. map 与 unordered_map', link: '/tech/cpp/map-unordered-map' },
+            { text: '6. 栈、堆与虚拟内存', link: '/tech/cpp/memory-stack-heap-virtual' },
+            { text: '7. 内存安全与诊断', link: '/tech/cpp/memory-safety-debugging' }
           ]
         }
       ],
