@@ -24,7 +24,6 @@ export default defineConfig({
         {
           text: '专题研究',
           items: [
-            { text: '期权基础入门', link: '/trading/options-basic' },
             { text: 'Heatmap 五层框架', link: '/trading/heatmap/five-layer' }
           ]
         }
