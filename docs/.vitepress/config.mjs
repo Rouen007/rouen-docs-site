@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  title: "神速 (Godspeed)",
+  title: "圣书 (Godspeed)",
   description: "Trading, Tech, and Life notes",
   themeConfig: {
     logo: '/assets/logo.webp',

@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: "Rouen x Hunter"
-  text: "神速 · 知识沉淀"
+  text: "圣书 · 知识沉淀"
   tagline: "不预测方向，只相信系统。—— 就像雷电本能的反应。"
   image:
     src: /assets/hero.jpeg
