@@ -31,9 +31,25 @@ export default defineConfig({
       ],
       '/tech/': [
         {
-          text: '技术笔记',
+          text: '导读',
           items: [
             { text: '技术主页', link: '/tech/' }
+          ]
+        },
+        {
+          text: 'C++ 学习地图',
+          items: [
+            { text: '现代 C++ 与游戏引擎基础', link: '/tech/cpp-engine-foundations' }
+          ]
+        },
+        {
+          text: 'C++ 基础篇章',
+          items: [
+            { text: '1. 生命周期、RAII 与所有权', link: '/tech/cpp/lifetime-raii-ownership' },
+            { text: '2. 复制、移动与 noexcept', link: '/tech/cpp/copy-move-noexcept' },
+            { text: '3. 对象模型与多态', link: '/tech/cpp/object-model-polymorphism' },
+            { text: '4. vector、list 与迭代器', link: '/tech/cpp/containers-vector-list' },
+            { text: '5. map 与 unordered_map', link: '/tech/cpp/map-unordered-map' }
           ]
         }
       ],

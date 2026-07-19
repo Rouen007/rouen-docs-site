@@ -432,4 +432,4 @@ public:
 7. 虚函数的性能应结合内联、数据布局、缓存和分支预测一起判断。
 8. 虚函数适合系统边界，不一定适合海量对象的热循环。
 
-[← 上一章：复制、移动、Rule of Five 与 noexcept](./copy-move-noexcept.md) · [返回学习地图](../cpp-engine-foundations.md)
+[← 上一章：复制、移动、Rule of Five 与 noexcept](./copy-move-noexcept.md) · [下一章：vector、list 与迭代器失效 →](./containers-vector-list.md)

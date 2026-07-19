@@ -27,6 +27,16 @@
    - vptr、vtable 与虚调用
    - 虚析构、对象切片与构造期间的虚调用
    - 虚函数在引擎边界和热路径中的取舍
+4. [`vector`、`list` 与迭代器失效](./cpp/containers-vector-list.md)
+   - `size`、`capacity`、`reserve` 与 `resize`
+   - 扩容、插入和删除的失效规则
+   - 连续内存、CPU Cache 与节点式容器
+   - swap-and-pop、erase-remove 与容量复用
+5. [`map`、`unordered_map` 与 rehash](./cpp/map-unordered-map.md)
+   - 平衡树、哈希、Bucket 与冲突
+   - Load Factor、rehash 和迭代器失效
+   - 查询与插入接口的隐藏行为
+   - Flat Hash Map、字符串键与引擎选择
 
 本页保留为知识总览。专题篇章按学习顺序展开，并记录讨论中补充的细节。
 

@@ -13,3 +13,5 @@
 1. [对象生命周期、RAII 与所有权](./cpp/lifetime-raii-ownership.md)
 2. [复制、移动、Rule of Five 与 `noexcept`](./cpp/copy-move-noexcept.md)
 3. [对象模型、虚函数与多态](./cpp/object-model-polymorphism.md)
+4. [`vector`、`list` 与迭代器失效](./cpp/containers-vector-list.md)
+5. [`map`、`unordered_map` 与 rehash](./cpp/map-unordered-map.md)
