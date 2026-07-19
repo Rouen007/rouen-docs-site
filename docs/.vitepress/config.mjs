@@ -49,7 +49,7 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/Rouen007/heatmap-docs' }
+      { icon: 'github', link: 'https://github.com/Rouen007/rouen-docs-site' }
     ]
   }
 })

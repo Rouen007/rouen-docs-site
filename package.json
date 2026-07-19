@@ -1,5 +1,5 @@
 {
-  "name": "heatmap-docs",
+  "name": "rouen-docs-site",
   "version": "1.0.0",
   "scripts": {
     "docs:dev": "vitepress dev docs",
