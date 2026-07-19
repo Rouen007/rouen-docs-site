@@ -25,7 +25,8 @@ export default defineConfig({
           text: '专题研究',
           items: [
             { text: 'Heatmap 五层框架', link: '/trading/heatmap/five-layer' },
-            { text: 'GEX 日内操作手册', link: '/trading/gex-intraday-guide' }
+            { text: 'GEX 日内操作手册', link: '/trading/gex-intraday-guide' },
+            { text: 'SPX 已验证规则终稿', link: '/trading/gex-spx-rules-data' }
           ]
         }
       ],
