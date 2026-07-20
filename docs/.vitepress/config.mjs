@@ -3,6 +3,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "圣书 (Godspeed)",
   description: "Trading, Tech, and Life notes",
+  base: '/rouen-docs-site/',
   themeConfig: {
     logo: '/assets/logo.webp',
     nav: [
