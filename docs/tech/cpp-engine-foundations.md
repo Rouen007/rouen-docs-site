@@ -57,18 +57,19 @@
    - Lock-free、ABA 与 False Sharing
    - 线程池、Work Stealing 与 Task Graph
    - 引擎线程模型、GPU Fence 与退出协议
+10. [网络、动画与物理概览](./cpp/game-runtime-systems-overview.md)
+   - TCP/UDP、状态同步、预测、校正与插值
+   - Tick、固定时间步与 Render Snapshot
+   - 动画状态机、混合、IK 与蒙皮
+   - Broad Phase、Narrow Phase、Solver 与穿透
 
 ## 后续专题路线
 
 下面的主题将继续按独立篇章整理：
 
-10. 游戏网络层、TCP/UDP 与可靠消息；
-11. 帧同步、状态同步、客户端预测与回滚；
-12. 编译、链接、ABI、构建系统与 Python 工具链；
-13. Lua 虚拟机、Table、GC 与 C++ 绑定；
-14. 骨骼动画、混合、IK 与蒙皮；
-15. 物理引擎、固定时间步、碰撞检测与确定性；
-16. GPU 与 Graphics Pipeline、Draw Call 和性能分析。
+11. 编译、链接、ABI、构建系统与 Python 工具链；
+12. Lua 虚拟机、Table、GC 与 C++ 绑定；
+13. GPU 与 Graphics Pipeline、Draw Call 和性能分析。
 
 本页保留为知识总览。专题篇章按学习顺序展开，并记录讨论中补充的细节。
 
