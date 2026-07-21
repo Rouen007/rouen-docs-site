@@ -31,7 +31,8 @@ export default defineConfig({
             { text: '3. 突破回踩与失败突破', link: '/trading/intraday-entry/03-breakout-retest-and-failed-breakout' },
             { text: '4. 止损、风险与仓位', link: '/trading/intraday-entry/04-risk-stop-and-position-sizing' },
             { text: '5. 多周期过滤与辅助确认', link: '/trading/intraday-entry/05-multi-timeframe-and-confirmation' },
-            { text: '6. ③、资金流与持仓管理', link: '/trading/intraday-entry/06-flow-and-position-management' }
+            { text: '6. ③、资金流与持仓管理', link: '/trading/intraday-entry/06-flow-and-position-management' },
+            { text: '7. 相对强弱与高位末端冲刺', link: '/trading/intraday-entry/07-relative-strength-and-late-sprint' }
           ]
         },
         {
