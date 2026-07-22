@@ -69,7 +69,8 @@ export default defineConfig({
             { text: '7. 内存安全与诊断', link: '/tech/cpp/memory-safety-debugging' },
             { text: '8. 多线程与同步原语', link: '/tech/cpp/multithreading-synchronization' },
             { text: '9. Atomic 与任务系统', link: '/tech/cpp/atomics-memory-order-task-system' },
-            { text: '10. 网络、动画与物理概览', link: '/tech/cpp/game-runtime-systems-overview' }
+            { text: '10. 网络、动画与物理概览', link: '/tech/cpp/game-runtime-systems-overview' },
+            { text: '11. 图形渲染管线与性能基础', link: '/tech/cpp/rendering-pipeline-and-performance' }
           ]
         }
       ],

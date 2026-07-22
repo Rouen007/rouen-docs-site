@@ -62,14 +62,18 @@
    - Tick、固定时间步与 Render Snapshot
    - 动画状态机、混合、IK 与蒙皮
    - Broad Phase、Narrow Phase、Solver 与穿透
+11. [图形渲染管线与性能基础](./cpp/rendering-pipeline-and-performance.md)
+   - Render Snapshot、RenderPacket、RenderQueue 与 Command Buffer
+   - RenderGraph、资源依赖、Descriptor 与 GPU 资源生命周期
+   - Graphics Pipeline、纹理、阴影与后处理
+   - CPU/GPU 瓶颈、移动端带宽与 Overdraw
 
 ## 后续专题路线
 
 下面的主题将继续按独立篇章整理：
 
-11. 编译、链接、ABI、构建系统与 Python 工具链；
-12. Lua 虚拟机、Table、GC 与 C++ 绑定；
-13. GPU 与 Graphics Pipeline、Draw Call 和性能分析。
+12. 编译、链接、ABI、构建系统与 Python 工具链；
+13. Lua 虚拟机、Table、GC 与 C++ 绑定。
 
 本页保留为知识总览。专题篇章按学习顺序展开，并记录讨论中补充的细节。
 
