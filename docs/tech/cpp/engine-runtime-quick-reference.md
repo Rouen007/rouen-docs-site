@@ -205,7 +205,28 @@ priority_queue：优先级调度、Top K
 哈希：快速查找、去重和映射
 ```
 
-## 十、最小知识主线
+## 十、DX11 与 DX12
+
+```text
+DX11：驱动和运行时管理较多，开发简单
+DX12：应用显式管理资源、Command List、Descriptor、Barrier 和 Fence
+```
+
+DX12 可以降低驱动开销并改善多线程命令录制，但也要求引擎正确管理：
+
+```text
+Resource State
+Descriptor Heap
+Root Signature
+Pipeline State Object
+Command Allocator
+Command Queue
+Fence
+```
+
+它不会自动带来性能提升，实际收益取决于 CPU 命令开销、资源管理、同步和实现质量。
+
+## 十一、最小知识主线
 
 ```text
 对象是否活着？

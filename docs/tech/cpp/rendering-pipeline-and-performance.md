@@ -249,6 +249,98 @@ CPU 低、GPU 高：Shader、像素、带宽、阴影或后处理可能是瓶颈
 
 性能优化应结合 CPU/GPU 时间线、GPU Capture、Overdraw、Shader 时间和资源带宽分析，而不是只根据代码直觉判断。
 
+## 十、DX11 与 DX12
+
+DirectX 11 和 DirectX 12 的核心差异是抽象层次不同：
+
+```text
+DX11：驱动和运行时隐式管理更多工作
+DX12：应用显式管理更多资源、命令和同步
+```
+
+### 主要区别
+
+| 方面 | DX11 | DX12 |
+| --- | --- | --- |
+| 抽象层次 | 较高，使用相对简单 | 较低，接近硬件 |
+| CPU 开销 | 驱动处理较多隐式工作 | 应用自行组织，控制力更强 |
+| 多线程录制 | 支持有限，可能存在额外同步 | Command List 可以更好地并行录制 |
+| 资源状态 | 运行时管理较多 | 需要显式 Resource Barrier |
+| 内存管理 | 驱动和运行时参与较多 | 应用对 Heap、复用和驻留有更多控制 |
+| 资源绑定 | SRV、RTV、DSV 等 View | Descriptor Heap 和 Descriptor Table |
+| 同步 | 隐式同步较多 | Command Queue、Fence 等显式同步 |
+| 复杂度 | 较低 | 较高，应用承担更多正确性责任 |
+
+### DX11 的典型模型
+
+```text
+创建资源
+    ↓
+创建 View
+    ↓
+设置 Pipeline 状态
+    ↓
+绑定资源
+    ↓
+Draw
+```
+
+DX11 通过 Immediate Context 和 Deferred Context 提交命令，驱动和运行时会帮助处理部分资源状态、内存和同步问题。开发成本较低，但引擎对底层行为和多线程扩展的控制较少。
+
+### DX12 的典型模型
+
+```text
+创建 Resource
+    ↓
+创建 Descriptor
+    ↓
+准备 Root Signature
+    ↓
+创建 Pipeline State Object
+    ↓
+录制 Command List
+    ↓
+插入 Resource Barrier
+    ↓
+提交 Command Queue
+    ↓
+Signal Fence
+```
+
+DX12 通常将命令存储、命令列表和执行队列分开：
+
+```text
+Command Allocator
+    ↓
+Command List
+    ↓
+Command Queue
+    ↓
+GPU
+```
+
+多个 Worker 可以并行录制不同的 Command List，之后再提交到队列。资源状态、Descriptor、Allocator 重置时机和 GPU 完成进度都需要由引擎明确管理。
+
+### DX12 为什么可能降低 CPU 开销
+
+```text
+DX11：应用 → 驱动判断和管理 → GPU
+DX12：应用组织资源和命令 → GPU
+```
+
+当 Draw Call 很多、状态切换频繁或命令录制成为 CPU 瓶颈时，DX12 的显式模型可以减少驱动开销并改善多线程扩展。但 DX12 不会自动让所有程序变快；错误的 Barrier、Descriptor、内存复用或同步设计可能导致性能下降或 GPU 错误。
+
+### DX12 的关键管理对象
+
+- Resource Barrier：描述资源从一种使用状态转换到另一种状态；
+- Descriptor Heap：集中存放资源绑定描述；
+- Root Signature：规定 Shader 如何访问资源；
+- Pipeline State Object：组合 Shader、Blend、Rasterizer、Depth 等管线状态；
+- Command Allocator：保存命令记录所需的底层内存；
+- Fence：判断 Command Allocator、Upload Buffer 和 GPU Resource 何时可以复用。
+
+DX11 和 DX12 都可以构建高性能渲染器，选择取决于目标平台、引擎抽象、驱动情况和维护成本。DX12 的价值主要是显式控制和可扩展性，而不是单纯替换 API 就获得性能提升。
+
 ## 本篇结论
 
 1. 游戏对象经过快照、裁剪和提取后，变成适合渲染的 RenderPacket。
@@ -257,5 +349,6 @@ CPU 低、GPU 高：Shader、像素、带宽、阴影或后处理可能是瓶颈
 4. Mesh、Material、Shader、Pipeline State 和 Transform 共同描述一次绘制。
 5. 移动端渲染重点通常是带宽、Overdraw、纹理、Shader 和功耗。
 6. 性能优化必须先区分 CPU 瓶颈、GPU 瓶颈和同步等待。
+7. DX11 抽象较高、开发简单；DX12 把资源状态、命令、Descriptor、内存和同步更多地交给引擎显式管理。
 
 [← 上一章：网络、动画与物理概览](./game-runtime-systems-overview.md) · [返回学习地图](../cpp-engine-foundations.md)
