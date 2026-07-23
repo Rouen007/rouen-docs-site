@@ -1,0 +1,1 @@
+import{_ as r,o as t,c as a,a1 as o}from"./chunks/framework.BKJzsOC1.js";const c=JSON.parse('{"title":"关于 Rouen","description":"","frontmatter":{},"headers":[],"relativePath":"about.md","filePath":"about.md"}'),n={name:"about.md"};function s(i,e,l,u,h,g){return t(),a("div",null,[...e[0]||(e[0]=[o("",15)])])}const m=r(n,[["render",s]]);export{c as __pageData,m as default};

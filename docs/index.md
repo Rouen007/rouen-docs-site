@@ -2,9 +2,9 @@
 layout: home
 
 hero:
-  name: "Rouen x Hunter"
-  text: "圣书 · 知识沉淀"
-  tagline: "不预测方向，只相信系统。—— 就像雷电本能的反应。"
+  name: "Rouen"
+  text: "游戏引擎开发 · 野生 Trader"
+  tagline: "C++ 极客 / 程序员。不预测方向，只相信系统。"
   image:
     src: /assets/hero.jpeg
     alt: Killua Godspeed
@@ -13,17 +13,17 @@ hero:
       text: 📈 探索交易笔记
       link: /trading/
     - theme: alt
-      text: 💻 翻阅技术文章
+      text: 💻 翻阅 C++ & 引擎
       link: /tech/
 
 features:
-  - title: 📈 Trading
-    details: 期权结构、Heatmap 交易体系、价格行为与市场微观结构分析。
+  - title: 📈 野生 Trader · 交易系统
+    details: GEX 结构分析、SPX 日内策略、Heatmap 五层框架与数据回测。
     link: /trading/
-  - title: 💻 Tech
-    details: 客户端开发、渲染引擎、大模型与 AI 代理技术栈探索。
+  - title: 💻 C++ & 游戏引擎开发
+    details: 现代 C++ 规范、引擎底层运行时、内存模型、并发与渲染管线。
     link: /tech/
-  - title: ☕ Life
-    details: 生活随笔、思考与杂谈。
+  - title: ☕ 极客随笔与生活
+    details: 程序员视角下的独立思考、数字花园与生活沉淀。
     link: /life/
 ---

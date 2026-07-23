@@ -28,6 +28,7 @@
 6. [第六章：③、资金流与持仓管理](./06-flow-and-position-management.md)
 7. [第七章：相对强弱与高位末端冲刺](./07-relative-strength-and-late-sprint.md)
 8. [第八章：反弹、反转与回踩有效性](./08-bounce-reversal-and-retest-validity.md)
+9. [第九章：③后的建仓时机与追价控制](./09-entry-timing-and-chase-control.md)
 
 ## 建议学习顺序
 
