@@ -249,6 +249,41 @@ CPU 低、GPU 高：Shader、像素、带宽、阴影或后处理可能是瓶颈
 
 性能优化应结合 CPU/GPU 时间线、GPU Capture、Overdraw、Shader 时间和资源带宽分析，而不是只根据代码直觉判断。
 
+### iOS Instruments 中的常用观察项
+
+iOS 性能分析通常先用 Instruments 判断问题属于 CPU、内存、GPU 还是功耗，再回到具体代码和渲染资源定位。
+
+| 工具或指标 | 主要观察内容 | 常见用途 |
+| --- | --- | --- |
+| Time Profiler | 函数的 Self Time、Total Time、调用次数 | 找 CPU 热点、主线程卡顿和单帧耗时过高的函数 |
+| Allocations | Live Bytes、Overall Bytes、分配次数、对象类型 | 判断频繁分配、内存峰值和生命周期过长 |
+| Leaks | 泄漏对象和引用路径 | 排查长期运行后持续增长的内存 |
+| VM Tracker | Resident、Dirty、虚拟内存区域 | 区分堆内存、纹理/映射内存和系统内存压力 |
+| Metal System Trace | Command Buffer、GPU Duration、提交间隔、等待 | 判断 GPU 是否忙、CPU 是否提交不及时、是否存在同步空洞 |
+| Energy Log | CPU、GPU、网络和功耗活动 | 判断持续高负载、发热和降频风险 |
+| os_signpost / Points of Interest | 自定义阶段和时间区间 | 将逻辑帧、资源加载、提交等事件标到系统时间线上 |
+
+几个指标需要结合起来看：
+
+- Time Profiler 中某函数 Total Time 高，说明它及其子调用占用时间多；Self Time 高，才更接近函数自身的直接开销。
+- Metal System Trace 中 GPU Duration 高，通常需要继续检查 Shader、像素数量、带宽、Render Target 和后处理；CPU 提交间隔过大，则可能是主线程或渲染线程瓶颈。
+- Allocations 的峰值和 Live Bytes 不能只看单帧数值，还要观察场景切换、资源加载和长时间运行后的趋势。
+
+### Android 设备兼容性
+
+Android 的兼容性不能只按系统版本判断，还要考虑 GPU 厂商、图形 API、驱动行为、内存预算和热状态。常见 GPU 主要包括 Adreno、Mali 和 PowerVR，不同设备对格式、精度和扩展的支持可能不同。
+
+需要重点确认：
+
+- 图形 API：OpenGL ES、Vulkan 以及目标设备上的实际驱动版本；
+- Shader：精度限定符、分支、纹理采样、编译器差异和特殊值处理；
+- 纹理与 Render Target：ASTC/ETC2 等压缩格式、最大尺寸、颜色格式、深度格式和 MRT 支持；
+- 渲染能力：Compute、Instancing、MSAA、后处理和其他扩展是否可用；
+- 资源预算：显存/外部内存、分辨率、纹理清晰度、加载峰值和后台回收；
+- 设备状态：温度、降频、电量模式和长时间运行后的帧时间变化。
+
+引擎通常通过能力查询和分档配置适配设备，而不是在业务代码中到处判断型号。启动时记录 GPU、API、驱动和关键扩展，根据能力选择纹理格式、Shader 变体、分辨率、阴影等级和后处理路径；对于已知驱动问题，再集中维护少量 workaround。验证时应覆盖不同 GPU 厂商、低中高端设备、不同 API 和冷启动/长时间运行等场景。
+
 ## 十、DX11 与 DX12
 
 DirectX 11 和 DirectX 12 的核心差异是抽象层次不同：

@@ -193,6 +193,8 @@ Synchronization-bound：锁、Fence、资源、线程或任务等待
 针对 Shader、像素和带宽优化
 ```
 
+iOS 常用 Instruments：Time Profiler 看 CPU 热点，Allocations 和 VM Tracker 看分配与内存峰值，Metal System Trace 看 Command Buffer、GPU Duration 和 CPU-GPU 空洞，Energy Log 看持续负载、功耗与发热。Android 兼容性重点关注 Adreno/Mali/PowerVR 差异、OpenGL ES/Vulkan、ASTC/ETC2、Shader 精度、Render Target 格式、内存预算和热降频，并通过能力查询与分档配置适配设备。
+
 ## 九、常用数据结构
 
 ```text
