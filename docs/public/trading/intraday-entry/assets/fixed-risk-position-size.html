@@ -1,0 +1,48 @@
+<div id="fixed-risk-position-size" style="width:100%;color:var(--foreground,#1e293b)">
+  <svg viewBox="0 0 1000 470" role="img" aria-labelledby="fr-title fr-desc" style="display:block;width:100%;height:auto">
+    <title id="fr-title">固定风险下止损距离与仓位大小的关系</title>
+    <desc id="fr-desc">左图止损距离较小，单位仓位可以较大；右图止损距离较大，单位仓位必须变小。两笔交易的最大计划风险都为100美元。</desc>
+    <text x="500" y="26" text-anchor="middle" font-size="21" font-weight="500">同样最多亏 100 美元，止损越远，仓位越小</text>
+    <text x="500" y="48" text-anchor="middle" font-size="13" fill="var(--muted-foreground,#64748b)">先决定每笔最多亏多少，再由止损距离反推仓位</text>
+
+    <g transform="translate(25 74)">
+      <text x="225" y="0" text-anchor="middle" font-size="17" font-weight="500">A. 结构紧凑：止损 2 点</text>
+      <rect x="0" y="18" width="450" height="350" rx="8" fill="var(--card,#ffffff)" stroke="var(--border,#dbe3ec)"/>
+      <g stroke="var(--border,#e5e7eb)" stroke-width="1"><line x1="28" y1="70" x2="422" y2="70"/><line x1="28" y1="135" x2="422" y2="135"/><line x1="28" y1="200" x2="422" y2="200"/><line x1="28" y1="265" x2="422" y2="265"/></g>
+      <line x1="28" y1="190" x2="422" y2="190" stroke="var(--viz-series-1,#2563eb)" stroke-width="2" stroke-dasharray="7 5"/><text x="38" y="181" font-size="11">VWAP / 边界</text>
+      <rect x="28" y="286" width="394" height="38" fill="var(--viz-series-2,#16a34a)" opacity=".13"/><text x="410" y="309" text-anchor="end" font-size="11">需求区</text>
+      <g stroke-linecap="round">
+        <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="75" y1="195" x2="75" y2="280" stroke-width="3"/><rect x="65" y="215" width="20" height="45" rx="2"/></g>
+        <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="135" y1="225" x2="135" y2="285" stroke-width="3"/><rect x="125" y="235" width="20" height="32" rx="2"/></g>
+        <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="195" y1="150" x2="195" y2="230" stroke-width="3"/><rect x="185" y="170" width="20" height="45" rx="2"/></g>
+        <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="255" y1="170" x2="255" y2="245" stroke-width="3"/><rect x="245" y="190" width="20" height="35" rx="2"/></g>
+        <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="315" y1="105" x2="315" y2="195" stroke-width="3"/><rect x="305" y="125" width="20" height="52" rx="2"/></g>
+        <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="375" y1="65" x2="375" y2="145" stroke-width="3"/><rect x="365" y="85" width="20" height="45" rx="2"/></g>
+      </g>
+      <line x1="300" y1="178" x2="360" y2="178" stroke="var(--viz-series-1,#2563eb)" stroke-width="2"/><text x="304" y="171" font-size="12">③入场</text>
+      <line x1="28" y1="245" x2="422" y2="245" stroke="var(--destructive,#dc2626)" stroke-width="2" stroke-dasharray="6 4"/><text x="410" y="239" text-anchor="end" font-size="12" fill="var(--destructive,#dc2626)">止损</text>
+      <text x="225" y="346" text-anchor="middle" font-size="13">风险预算：$100</text>
+      <text x="225" y="366" text-anchor="middle" font-size="13" fill="var(--viz-series-2,#16a34a)">100 ÷ 2 = 50 单位</text>
+    </g>
+
+    <g transform="translate(525 74)">
+      <text x="225" y="0" text-anchor="middle" font-size="17" font-weight="500">B. 波动较大：止损 5 点</text>
+      <rect x="0" y="18" width="450" height="350" rx="8" fill="var(--card,#ffffff)" stroke="var(--border,#dbe3ec)"/>
+      <g stroke="var(--border,#e5e7eb)" stroke-width="1"><line x1="28" y1="70" x2="422" y2="70"/><line x1="28" y1="135" x2="422" y2="135"/><line x1="28" y1="200" x2="422" y2="200"/><line x1="28" y1="265" x2="422" y2="265"/></g>
+      <line x1="28" y1="190" x2="422" y2="190" stroke="var(--viz-series-1,#2563eb)" stroke-width="2" stroke-dasharray="7 5"/><text x="38" y="181" font-size="11">VWAP / 边界</text>
+      <rect x="28" y="286" width="394" height="38" fill="var(--viz-series-2,#16a34a)" opacity=".13"/><text x="410" y="309" text-anchor="end" font-size="11">需求区</text>
+      <g stroke-linecap="round">
+        <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="75" y1="195" x2="75" y2="280" stroke-width="3"/><rect x="65" y="215" width="20" height="45" rx="2"/></g>
+        <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="135" y1="225" x2="135" y2="285" stroke-width="3"/><rect x="125" y="235" width="20" height="32" rx="2"/></g>
+        <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="195" y1="150" x2="195" y2="230" stroke-width="3"/><rect x="185" y="170" width="20" height="45" rx="2"/></g>
+        <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="255" y1="170" x2="255" y2="270" stroke-width="3"/><rect x="245" y="190" width="20" height="35" rx="2"/></g>
+        <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="315" y1="105" x2="315" y2="195" stroke-width="3"/><rect x="305" y="125" width="20" height="52" rx="2"/></g>
+        <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="375" y1="65" x2="375" y2="145" stroke-width="3"/><rect x="365" y="85" width="20" height="45" rx="2"/></g>
+      </g>
+      <line x1="300" y1="178" x2="360" y2="178" stroke="var(--viz-series-1,#2563eb)" stroke-width="2"/><text x="304" y="171" font-size="12">③入场</text>
+      <line x1="28" y1="270" x2="422" y2="270" stroke="var(--destructive,#dc2626)" stroke-width="2" stroke-dasharray="6 4"/><text x="410" y="264" text-anchor="end" font-size="12" fill="var(--destructive,#dc2626)">结构外止损</text>
+      <text x="225" y="346" text-anchor="middle" font-size="13">风险预算：$100</text>
+      <text x="225" y="366" text-anchor="middle" font-size="13" fill="var(--destructive,#dc2626)">100 ÷ 5 = 20 单位</text>
+    </g>
+  </svg>
+</div>

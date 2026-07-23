@@ -1,0 +1,58 @@
+<div id="stop-invalidity" style="width:100%;color:var(--foreground,#1e293b)">
+  <svg viewBox="0 0 1000 500" role="img" aria-labelledby="si-title si-desc" style="display:block;width:100%;height:auto">
+    <title id="si-title">影线扫损与结构失效的区别</title>
+    <desc id="si-desc">左图价格短暂刺破结构后收回，中图收盘跌破并且反抽失败，右图止损已经触发后重新站回，应该等待新结构而不是立即追单。</desc>
+    <g transform="translate(20 30)">
+      <text x="150" y="0" text-anchor="middle" font-size="17" font-weight="500">A. 影线刺破，收盘收回</text>
+      <rect x="0" y="18" width="300" height="400" rx="8" fill="var(--card,#ffffff)" stroke="var(--border,#dbe3ec)"/>
+      <g stroke="var(--border,#e5e7eb)" stroke-width="1"><line x1="22" y1="75" x2="278" y2="75"/><line x1="22" y1="145" x2="278" y2="145"/><line x1="22" y1="215" x2="278" y2="215"/><line x1="22" y1="285" x2="278" y2="285"/><line x1="22" y1="355" x2="278" y2="355"/></g>
+      <line x1="22" y1="242" x2="278" y2="242" stroke="var(--viz-series-1,#2563eb)" stroke-width="2" stroke-dasharray="7 5"/><text x="30" y="233" font-size="11">结构边界</text>
+      <rect x="22" y="325" width="256" height="42" fill="var(--viz-series-2,#16a34a)" opacity=".13"/><text x="270" y="350" text-anchor="end" font-size="11">需求区</text>
+      <g stroke-linecap="round">
+        <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="55" y1="280" x2="55" y2="350" stroke-width="3"/><rect x="46" y="295" width="18" height="34" rx="2"/></g>
+        <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="95" y1="215" x2="95" y2="285" stroke-width="3"/><rect x="86" y="230" width="18" height="38" rx="2"/></g>
+        <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="135" y1="210" x2="135" y2="275" stroke-width="3"/><rect x="126" y="225" width="18" height="32" rx="2"/></g>
+        <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="175" y1="215" x2="175" y2="300" stroke-width="3"/><rect x="166" y="235" width="18" height="28" rx="2"/></g>
+        <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="215" y1="205" x2="215" y2="265" stroke-width="3"/><rect x="206" y="215" width="18" height="38" rx="2"/></g>
+        <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="255" y1="150" x2="255" y2="225" stroke-width="3"/><rect x="246" y="170" width="18" height="38" rx="2"/></g>
+      </g>
+      <circle cx="175" cy="298" r="12" fill="var(--viz-series-1,#2563eb)"/><text x="175" y="302" text-anchor="middle" font-size="10" fill="var(--primary-foreground,#fff)">影线</text>
+      <text x="150" y="390" text-anchor="middle" font-size="13" fill="var(--viz-series-2,#16a34a)">未确认失效：不要因一根影线恐慌</text>
+    </g>
+
+    <g transform="translate(345 30)">
+      <text x="150" y="0" text-anchor="middle" font-size="17" font-weight="500">B. 收盘跌破，反抽失败</text>
+      <rect x="0" y="18" width="300" height="400" rx="8" fill="var(--card,#ffffff)" stroke="var(--border,#dbe3ec)"/>
+      <g stroke="var(--border,#e5e7eb)" stroke-width="1"><line x1="22" y1="75" x2="278" y2="75"/><line x1="22" y1="145" x2="278" y2="145"/><line x1="22" y1="215" x2="278" y2="215"/><line x1="22" y1="285" x2="278" y2="285"/><line x1="22" y1="355" x2="278" y2="355"/></g>
+      <line x1="22" y1="242" x2="278" y2="242" stroke="var(--viz-series-1,#2563eb)" stroke-width="2" stroke-dasharray="7 5"/><text x="30" y="233" font-size="11">结构边界</text>
+      <g stroke-linecap="round">
+        <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="55" y1="280" x2="55" y2="350" stroke-width="3"/><rect x="46" y="295" width="18" height="34" rx="2"/></g>
+        <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="95" y1="215" x2="95" y2="285" stroke-width="3"/><rect x="86" y="230" width="18" height="38" rx="2"/></g>
+        <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="135" y1="205" x2="135" y2="300" stroke-width="3"/><rect x="126" y="220" width="18" height="58" rx="2"/></g>
+        <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="175" y1="245" x2="175" y2="305" stroke-width="3"/><rect x="166" y="255" width="18" height="30" rx="2"/></g>
+        <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="215" y1="270" x2="215" y2="350" stroke-width="3"/><rect x="206" y="285" width="18" height="42" rx="2"/></g>
+        <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="255" y1="320" x2="255" y2="385" stroke-width="3"/><rect x="246" y="335" width="18" height="32" rx="2"/></g>
+      </g>
+      <line x1="118" y1="242" x2="148" y2="242" stroke="var(--destructive,#dc2626)" stroke-width="3"/><text x="150" y="210" text-anchor="middle" font-size="12" fill="var(--destructive,#dc2626)">有效收盘跌破</text>
+      <text x="150" y="390" text-anchor="middle" font-size="13" fill="var(--destructive,#dc2626)">结构失效：接受错误，不扛单</text>
+    </g>
+
+    <g transform="translate(670 30)">
+      <text x="150" y="0" text-anchor="middle" font-size="17" font-weight="500">C. 止损触发后：等待新结构</text>
+      <rect x="0" y="18" width="300" height="400" rx="8" fill="var(--card,#ffffff)" stroke="var(--border,#dbe3ec)"/>
+      <g stroke="var(--border,#e5e7eb)" stroke-width="1"><line x1="22" y1="75" x2="278" y2="75"/><line x1="22" y1="145" x2="278" y2="145"/><line x1="22" y1="215" x2="278" y2="215"/><line x1="22" y1="285" x2="278" y2="285"/><line x1="22" y1="355" x2="278" y2="355"/></g>
+      <line x1="22" y1="242" x2="278" y2="242" stroke="var(--viz-series-1,#2563eb)" stroke-width="2" stroke-dasharray="7 5"/><text x="30" y="233" font-size="11">结构边界</text>
+      <g stroke-linecap="round">
+        <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="55" y1="280" x2="55" y2="350" stroke-width="3"/><rect x="46" y="295" width="18" height="34" rx="2"/></g>
+        <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="95" y1="210" x2="95" y2="315" stroke-width="3"/><rect x="86" y="230" width="18" height="60" rx="2"/></g>
+        <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="135" y1="275" x2="135" y2="350" stroke-width="3"/><rect x="126" y="290" width="18" height="36" rx="2"/></g>
+        <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="175" y1="245" x2="175" y2="300" stroke-width="3"/><rect x="166" y="250" width="18" height="30" rx="2"/></g>
+        <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="215" y1="175" x2="215" y2="260" stroke-width="3"/><rect x="206" y="190" width="18" height="50" rx="2"/></g>
+        <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="255" y1="120" x2="255" y2="205" stroke-width="3"/><rect x="246" y="140" width="18" height="45" rx="2"/></g>
+      </g>
+      <line x1="22" y1="316" x2="278" y2="316" stroke="var(--destructive,#dc2626)" stroke-width="2" stroke-dasharray="6 4"/><text x="270" y="309" text-anchor="end" font-size="11" fill="var(--destructive,#dc2626)">止损已触发</text>
+      <line x1="145" y1="285" x2="215" y2="205" stroke="var(--viz-series-1,#2563eb)" stroke-width="2" stroke-dasharray="5 4"/><text x="182" y="270" text-anchor="middle" font-size="12">重新站回</text>
+      <text x="150" y="390" text-anchor="middle" font-size="13">先退出，等新的③，不立即追回</text>
+    </g>
+  </svg>
+</div>

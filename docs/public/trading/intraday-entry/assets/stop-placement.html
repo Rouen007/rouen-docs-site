@@ -1,0 +1,52 @@
+<div id="stop-placement" style="width:100%;color:var(--foreground,#1e293b)">
+  <svg viewBox="0 0 1000 470" role="img" aria-labelledby="sp-title sp-desc" style="display:block;width:100%;height:auto">
+    <title id="sp-title">止损位置与扫损的对比</title>
+    <desc id="sp-desc">左图止损放在回踩低点附近，价格用影线扫过止损后继续上涨；右图止损放在结构低点外，普通影线没有破坏结构。</desc>
+    <defs>
+      <marker id="sp-arrow-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="var(--destructive,#dc2626)"/></marker>
+      <marker id="sp-arrow-green" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="var(--viz-series-2,#16a34a)"/></marker>
+    </defs>
+    <g transform="translate(25 28)">
+      <text x="225" y="0" text-anchor="middle" font-size="17" font-weight="500">A. 止损太近：容易被扫掉</text>
+      <rect x="0" y="18" width="450" height="390" rx="8" fill="var(--card,#ffffff)" stroke="var(--border,#dbe3ec)"/>
+      <g stroke="var(--border,#e5e7eb)" stroke-width="1"><line x1="28" y1="70" x2="422" y2="70"/><line x1="28" y1="135" x2="422" y2="135"/><line x1="28" y1="200" x2="422" y2="200"/><line x1="28" y1="265" x2="422" y2="265"/><line x1="28" y1="330" x2="422" y2="330"/></g>
+      <line x1="28" y1="225" x2="422" y2="225" stroke="var(--viz-series-1,#2563eb)" stroke-width="2" stroke-dasharray="8 5"/><text x="38" y="216" font-size="11">VWAP / 突破边界</text>
+      <rect x="28" y="335" width="394" height="40" fill="var(--viz-series-2,#16a34a)" opacity=".13"/><text x="410" y="359" text-anchor="end" font-size="11">需求区</text>
+      <g stroke-linecap="round">
+        <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="65" y1="180" x2="65" y2="305" stroke-width="3"/><rect x="55" y="205" width="20" height="70" rx="2"/></g>
+        <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="120" y1="220" x2="120" y2="290" stroke-width="3"/><rect x="110" y="230" width="20" height="38" rx="2"/></g>
+        <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="175" y1="160" x2="175" y2="245" stroke-width="3"/><rect x="165" y="180" width="20" height="48" rx="2"/></g>
+        <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="230" y1="190" x2="230" y2="275" stroke-width="3"/><rect x="220" y="215" width="20" height="35" rx="2"/></g>
+        <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="285" y1="145" x2="285" y2="215" stroke-width="3"/><rect x="275" y="160" width="20" height="38" rx="2"/></g>
+        <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="340" y1="95" x2="340" y2="165" stroke-width="3"/><rect x="330" y="112" width="20" height="40" rx="2"/></g>
+      </g>
+      <line x1="275" y1="208" x2="350" y2="208" stroke="var(--viz-series-1,#2563eb)" stroke-width="2"/><text x="278" y="201" font-size="12">③确认 / 入场</text>
+      <line x1="28" y1="281" x2="422" y2="281" stroke="var(--destructive,#dc2626)" stroke-width="2" stroke-dasharray="6 4"/><text x="410" y="276" text-anchor="end" font-size="12" fill="var(--destructive,#dc2626)">过近止损</text>
+      <line x1="230" y1="275" x2="230" y2="302" stroke="var(--destructive,#dc2626)" stroke-width="3" marker-end="url(#sp-arrow-red)"/>
+      <text x="244" y="300" font-size="12" fill="var(--destructive,#dc2626)">影线扫过</text>
+      <path d="M245 265 C260 290 275 286 292 245 C310 205 330 175 350 145" fill="none" stroke="var(--viz-series-2,#16a34a)" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#sp-arrow-green)"/>
+      <text x="225" y="397" text-anchor="middle" font-size="13" fill="var(--destructive,#dc2626)">结果：先止损，再按原方向上涨</text>
+    </g>
+
+    <g transform="translate(525 28)">
+      <text x="225" y="0" text-anchor="middle" font-size="17" font-weight="500">B. 放在结构外：更合理</text>
+      <rect x="0" y="18" width="450" height="390" rx="8" fill="var(--card,#ffffff)" stroke="var(--border,#dbe3ec)"/>
+      <g stroke="var(--border,#e5e7eb)" stroke-width="1"><line x1="28" y1="70" x2="422" y2="70"/><line x1="28" y1="135" x2="422" y2="135"/><line x1="28" y1="200" x2="422" y2="200"/><line x1="28" y1="265" x2="422" y2="265"/><line x1="28" y1="330" x2="422" y2="330"/></g>
+      <line x1="28" y1="225" x2="422" y2="225" stroke="var(--viz-series-1,#2563eb)" stroke-width="2" stroke-dasharray="8 5"/><text x="38" y="216" font-size="11">VWAP / 突破边界</text>
+      <rect x="28" y="335" width="394" height="40" fill="var(--viz-series-2,#16a34a)" opacity=".13"/><text x="410" y="359" text-anchor="end" font-size="11">需求区</text>
+      <g stroke-linecap="round">
+        <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="65" y1="180" x2="65" y2="305" stroke-width="3"/><rect x="55" y="205" width="20" height="70" rx="2"/></g>
+        <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="120" y1="220" x2="120" y2="290" stroke-width="3"/><rect x="110" y="230" width="20" height="38" rx="2"/></g>
+        <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="175" y1="160" x2="175" y2="245" stroke-width="3"/><rect x="165" y="180" width="20" height="48" rx="2"/></g>
+        <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="230" y1="190" x2="230" y2="275" stroke-width="3"/><rect x="220" y="215" width="20" height="35" rx="2"/></g>
+        <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="285" y1="145" x2="285" y2="215" stroke-width="3"/><rect x="275" y="160" width="20" height="38" rx="2"/></g>
+        <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="340" y1="95" x2="340" y2="165" stroke-width="3"/><rect x="330" y="112" width="20" height="40" rx="2"/></g>
+      </g>
+      <line x1="275" y1="208" x2="350" y2="208" stroke="var(--viz-series-1,#2563eb)" stroke-width="2"/><text x="278" y="201" font-size="12">③确认 / 入场</text>
+      <line x1="28" y1="322" x2="422" y2="322" stroke="var(--destructive,#dc2626)" stroke-width="2" stroke-dasharray="6 4"/><text x="410" y="317" text-anchor="end" font-size="12" fill="var(--destructive,#dc2626)">结构外止损</text>
+      <line x1="230" y1="275" x2="230" y2="310" stroke="var(--viz-series-1,#2563eb)" stroke-width="2" stroke-dasharray="4 4"/><text x="244" y="306" font-size="12">正常回踩影线</text>
+      <path d="M245 265 C260 285 275 275 292 240 C310 200 330 170 350 140" fill="none" stroke="var(--viz-series-2,#16a34a)" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#sp-arrow-green)"/>
+      <text x="225" y="397" text-anchor="middle" font-size="13" fill="var(--viz-series-2,#16a34a)">结果：结构未失效，允许正常波动</text>
+    </g>
+  </svg>
+</div>
