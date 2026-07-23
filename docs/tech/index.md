@@ -22,3 +22,4 @@
 10. [网络、动画与物理概览](./cpp/game-runtime-systems-overview.md)
 11. [图形渲染管线与性能基础](./cpp/rendering-pipeline-and-performance.md)
 12. [引擎运行时与渲染系统速览](./cpp/engine-runtime-quick-reference.md)
+13. [类型转换与单例模式](./cpp/casts-and-singleton.md)

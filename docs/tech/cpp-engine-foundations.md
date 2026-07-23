@@ -72,6 +72,11 @@
    - 游戏线程、任务系统、渲染线程与 GPU 数据流
    - Render Snapshot、RenderPacket、RenderGraph 与 Fence
    - 性能定位和常用数据结构
+13. [类型转换与单例模式](./cpp/casts-and-singleton.md)
+   - `static_cast`、`dynamic_cast`、`const_cast` 与 `reinterpret_cast`
+   - 地址转换、底层内存和类型安全边界
+   - 函数内静态对象、`unique_ptr` 与显式生命周期
+   - 单例的线程安全、依赖关系和工程边界
 
 ## 后续专题路线
 
